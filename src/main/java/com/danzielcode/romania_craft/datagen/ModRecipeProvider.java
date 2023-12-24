@@ -20,6 +20,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
+        //Scythe
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItem.scythe.get())
                 .pattern("III")
                 .pattern("IS ")
@@ -28,6 +29,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.STICK)
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(pRecipeOutput);
+
+        //Pork Sausage
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItem.pork_sausage.get())
+                .requires(Items.COOKED_PORKCHOP, 5)
+                .unlockedBy(getHasName(Items.COOKED_PORKCHOP), has(Items.COOKED_PORKCHOP))
+                .save(pRecipeOutput);//TODO: Change crafting recepie to have intestines
+
     }
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
         multipleOreSmelting(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");
