@@ -36,6 +36,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.COOKED_PORKCHOP), has(Items.COOKED_PORKCHOP))
                 .save(pRecipeOutput);//TODO: Change crafting recepie to have intestines
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItem.racke.get())
+                .pattern("SSS")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(pRecipeOutput);
+
     }
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
         multipleOreSmelting(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");

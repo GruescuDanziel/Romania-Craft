@@ -20,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItem.scythe);
         simpleItem(ModItem.pork_sausage);
         simpleItem(ModItem.cheese);
+        simpleItem(ModItem.racke);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){
