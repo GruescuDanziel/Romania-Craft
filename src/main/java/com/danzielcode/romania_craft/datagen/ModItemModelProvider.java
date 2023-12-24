@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItem.scythe);
+        simpleItem(ModItem.pork_sausage);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){
