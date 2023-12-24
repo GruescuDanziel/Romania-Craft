@@ -9,4 +9,9 @@ public class ModFood{
             .nutrition(20)
             .saturationMod(3)
             .build();
+
+    public static FoodProperties chesee = new FoodProperties.Builder()
+            .nutrition(5)
+            .saturationMod(1)
+            .build();
 }
