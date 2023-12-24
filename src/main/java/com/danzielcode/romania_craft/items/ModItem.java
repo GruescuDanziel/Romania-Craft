@@ -2,7 +2,6 @@ package com.danzielcode.romania_craft.items;
 
 import com.danzielcode.romania_craft.RomaniaCraft;
 import com.danzielcode.romania_craft.items.custom.Scythe;
-import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,6 +17,7 @@ public class ModItem {
 
     //Foods
     public static RegistryObject<Item> pork_sausage = MOD_ITEMS.register("pork_sausage", () -> new Item(new Item.Properties().food(ModFood.porkSausage))); //TODO: Add intestines
+    public static RegistryObject<Item> cheese = MOD_ITEMS.register("cheese", () -> new Item(new Item.Properties().food(ModFood.chesee))); //TODO: Add a way to let cheese sit and age
 
 
     public static void register(IEventBus eventBus){
