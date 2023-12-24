@@ -1,8 +1,10 @@
 package com.danzielcode.romania_craft.items;
 
 import com.danzielcode.romania_craft.RomaniaCraft;
+import com.danzielcode.romania_craft.items.custom.Racke;
 import com.danzielcode.romania_craft.items.custom.Scythe;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -13,6 +15,7 @@ public class ModItem {
 
     //Tools
     public static RegistryObject<Item> scythe = MOD_ITEMS.register("scythe", () -> new Scythe(new Item.Properties().durability(100)));
+    public static RegistryObject<Item> racke = MOD_ITEMS.register("racke",() -> new Racke(Tiers.DIAMOND,1,1,new Item.Properties().durability(100)));
 
 
     //Foods
